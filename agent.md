@@ -8,18 +8,18 @@
 
 ## 0. Snapshot (read first)
 
-| Item | Convention |
-| --- | --- |
-| Nature | Pure web client — no backend in this repo |
-| Stack | TypeScript + React + React Router |
-| Design system | MUI only (`@mui/material`, Emotion). No other UI/CSS framework |
-| Tests | TDD mandatory: red → green → refactor |
-| Coverage | 100% statements / branches / functions / lines, gated in CI |
-| Type safety | `strict` tsconfig + extra flags, type-aware ESLint, `type-coverage --at-least 100` |
-| Quality | ESLint + unicorn + sonarjs + Testing Library rules, Prettier, Knip, dependency-cruiser |
-| CI | GitHub Actions: required `quality` + `secrets` jobs |
-| Branches | `prod` = production, `main` = integration/default |
-| Git flow | feature branch → PR into `main` → PR `main` into `prod` |
+| Item          | Convention                                                                             |
+| ------------- | -------------------------------------------------------------------------------------- |
+| Nature        | Pure web client — no backend in this repo                                              |
+| Stack         | TypeScript + React + React Router                                                      |
+| Design system | MUI only (`@mui/material`, Emotion). No other UI/CSS framework                         |
+| Tests         | TDD mandatory: red → green → refactor                                                  |
+| Coverage      | 100% statements / branches / functions / lines, gated in CI                            |
+| Type safety   | `strict` tsconfig + extra flags, type-aware ESLint, `type-coverage --at-least 100`     |
+| Quality       | ESLint + unicorn + sonarjs + Testing Library rules, Prettier, Knip, dependency-cruiser |
+| CI            | GitHub Actions: required `quality` + `secrets` jobs                                    |
+| Branches      | `prod` = production, `main` = integration/default                                      |
+| Git flow      | feature branch → PR into `main` → PR `main` into `prod`                                |
 
 **Five golden rules**
 
@@ -33,19 +33,19 @@
 
 ## Index — jump to your task
 
-| Task | Go to |
-| --- | --- |
-| Start / finish a task, branch, commit, PR | [§1 Git workflow](#1-git-workflow) |
-| Implement a feature or fix | [§2 TDD workflow](#2-tdd-workflow-mandatory) |
-| Write or repair a test, coverage questions | [§3 Tests & coverage](#3-tests-and-coverage) |
+| Task                                                 | Go to                                                 |
+| ---------------------------------------------------- | ----------------------------------------------------- |
+| Start / finish a task, branch, commit, PR            | [§1 Git workflow](#1-git-workflow)                    |
+| Implement a feature or fix                           | [§2 TDD workflow](#2-tdd-workflow-mandatory)          |
+| Write or repair a test, coverage questions           | [§3 Tests & coverage](#3-tests-and-coverage)          |
 | Naming, lint errors, types, `any`, dead code, cycles | [§4 Lint & static analysis](#4-lint--static-analysis) |
-| Format a file, Prettier disagreement | [§5 Formatting — Prettier](#5-formatting--prettier) |
-| Build a screen/component | [§6 UI — MUI](#6-ui--mui) |
-| Add/change a route | [§7 Routing — React Router](#7-routing--react-router) |
-| Why CI failed, what CI enforces | [§8 CI contract](#8-ci-contract) |
-| Final checklist before asking for review | [§9 Definition of done](#9-definition-of-done) |
-| Where files belong | [§10 Canonical layout](#10-canonical-layout) |
-| Keep this document small | [§11 Context hygiene](#11-context-hygiene) |
+| Format a file, Prettier disagreement                 | [§5 Formatting — Prettier](#5-formatting--prettier)   |
+| Build a screen/component                             | [§6 UI — MUI](#6-ui--mui)                             |
+| Add/change a route                                   | [§7 Routing — React Router](#7-routing--react-router) |
+| Why CI failed, what CI enforces                      | [§8 CI contract](#8-ci-contract)                      |
+| Final checklist before asking for review             | [§9 Definition of done](#9-definition-of-done)        |
+| Where files belong                                   | [§10 Canonical layout](#10-canonical-layout)          |
+| Keep this document small                             | [§11 Context hygiene](#11-context-hygiene)            |
 
 ---
 
@@ -69,7 +69,7 @@
 3. **GREEN** — write the minimum production code that makes it pass. No speculative features.
 4. Check coverage. If it dropped below 100%, add the missing case **before** refactoring.
 5. **REFACTOR** — improve structure while tests stay green; re-run `npm run check`.
-6. Repeat per behaviour. Tests are written *before* code, including bug fixes: reproduce the bug as a failing test first.
+6. Repeat per behaviour. Tests are written _before_ code, including bug fixes: reproduce the bug as a failing test first.
 
 Never add a test after the fact to "tick the coverage box" without first confirming the missing behaviour (that is a new RED step).
 
